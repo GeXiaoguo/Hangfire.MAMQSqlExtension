@@ -13,7 +13,7 @@
     <Company />
     <PackageProjectUrl>https://github.com/GeXiaoguo/Hangfire.MAMQSqlExtension</PackageProjectUrl>
     <RepositoryUrl>https://github.com/GeXiaoguo/Hangfire.MAMQSqlExtension</RepositoryUrl>
-    <PackageVersion>1.0.1</PackageVersion>
+    <PackageVersion>1.0.2</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>

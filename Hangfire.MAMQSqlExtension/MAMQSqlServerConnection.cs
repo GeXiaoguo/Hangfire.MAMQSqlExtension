@@ -109,7 +109,7 @@ namespace Hangfire.MAMQSqlExtension
                 string? recurringJobId = key switch
                 {
                     "recurring-jobs" => id,
-                    "schedule" => _sqlServerConnection.GetJobParameter(ids[0], "RecurringJobId")?.Replace("\"", ""),
+                    "schedule" => _sqlServerConnection.GetJobParameter(id, "RecurringJobId")?.Replace("\"", ""),
                     _ => throw new InvalidOperationException($"{key} is not a recognized job type")
                 };
 
