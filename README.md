@@ -16,7 +16,7 @@ This extension attempts to provide a workaround before the multiple application,
 ### Usage
 Usage examples are the provided in the [source code](https://github.com/GeXiaoguo/Hangfire.MAMQSqlExtension). The necessary steps are listed below.
 
-1. Install nuget package [Hangfire.MAMQSqlExtension](https://www.nuget.org/packages/Hangfire.MAMQSqlExtension/1.0.1):  i.e. `paket add Hangfire.MAMQSqlExtension --version 1.02`
+1. Install nuget package [Hangfire.MAMQSqlExtension](https://www.nuget.org/packages/Hangfire.MAMQSqlExtension/1.0.1):  i.e. `Install-Package Hangfire.MAMQSqlExtension -Version 1.0.2`
 
 2. Filter the jobs according to their queue settings before giving them to `RecurringJobScheduler` and `DelayedJobScheduler` for scheduling
 
