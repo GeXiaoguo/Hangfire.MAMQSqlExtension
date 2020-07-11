@@ -1,5 +1,5 @@
 # Hangfire.MAMQSqlExtension
-A **M**ulti-**A**pp, **M**ulti-**Q**ueue **SqlServerExtension** for running multiple servers for multiple applications against a single SQL Server database.
+A **M**ulti-**A**pp, **M**ulti-**Q**ueue **SqlExtension** for running multiple servers for multiple applications against a single SQL Server database.
 
 ## The problem
 An intuitive idea of running multiple Hangfire servers for multiple applications is to run different applications in different queues. Each queue can be watched by a dedicated server.
@@ -14,16 +14,18 @@ This extension attempts to provide a workaround before the multiple application,
 
 
 ### Usage
-Install nuget package [Hangfire.MAMQSqlExtension](https://www.nuget.org/packages/Hangfire.MAMQSqlExtension/1.0.1): `paket add Hangfire.MAMQSqlExtension --version 1.02`
+Usage examples are the provided in the [source code](https://github.com/GeXiaoguo/Hangfire.MAMQSqlExtension). The necessary steps are listed below.
 
-1. Filtering the jobs according to their queue settings before giving them to `RecurringJobScheduler` and `DelayedJobScheduler` for scheduling
+1. Install nuget package [Hangfire.MAMQSqlExtension](https://www.nuget.org/packages/Hangfire.MAMQSqlExtension/1.0.1):  i.e. `paket add Hangfire.MAMQSqlExtension --version 1.02`
+
+2. Filter the jobs according to their queue settings before giving them to `RecurringJobScheduler` and `DelayedJobScheduler` for scheduling
 
 ```
 GlobalConfiguration.Configuration
    .UseMAMQSqlServerStorage(connectionString, new SqlServerStorageOptions{...}, new[]{ "MyQueue" })
 ```
 
-2. Forcing job retries to respect the queue setting
+3. Force the job retries to respect the queue setting
 
 ```
 [RetryInQueue("MyQueue")]
@@ -33,7 +35,7 @@ public void MethodForJob()
 }
 ```
 
-3. Specifying queues when starting the `BackgroundJobServer`
+4. Specify queues for the `BackgroundJobServer`
 
 ```
     var serverOptions = new BackgroundJobServerOptions
@@ -43,10 +45,10 @@ public void MethodForJob()
     new BackgroundJobServer(serverOptions)
 ```
 
-4. Specifying a queue when registering the job
+5. Specify a queue when registering the job
 
 ```
-RecurringJob.AddOrUpdate(jobID, jobAction, cron, "MyQueue");
+RecurringJob.AddOrUpdate(jobID, jobAction, cron, TimeZoneInfo.Local, "MyQueue");
 ```
 
-5. In addition, since Dashboard is database specific. The dashboard will need to be able to deserialize jobs belonging to both applications. This means that the Dashboard executable needs to reference both all dlls that the jobs are defined in (e.g. `AppLib1` and `AppLib2`).
+6. In addition, since the Dashboard is database specific, it has to be shared between the two applications. The dashboard will need to be able to deserialize jobs for both applications. This means that the Dashboard executable needs to reference both all dlls that the jobs are defined in (e.g. `AppLib1` and `AppLib2`).
