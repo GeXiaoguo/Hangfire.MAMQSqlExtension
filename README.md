@@ -14,7 +14,7 @@ This extension attempts to provide a workaround before the multiple application,
 
 
 ### Usage
-Usage examples are the provided in the [source code](https://github.com/GeXiaoguo/Hangfire.MAMQSqlExtension). The necessary steps are listed below.
+Usage examples are the provided in the [examples](https://github.com/GeXiaoguo/Hangfire.MAMQSqlExtension/tree/master/examples). The necessary steps are listed below.
 
 1. Install nuget package [Hangfire.MAMQSqlExtension](https://www.nuget.org/packages/Hangfire.MAMQSqlExtension/1.0.1):  i.e. `Install-Package Hangfire.MAMQSqlExtension -Version 1.0.2`
 
