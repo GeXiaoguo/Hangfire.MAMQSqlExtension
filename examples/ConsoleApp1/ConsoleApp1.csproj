@@ -37,7 +37,7 @@
       <HintPath>..\..\packages\Hangfire.Core.1.7.11\lib\net46\Hangfire.Core.dll</HintPath>
     </Reference>
     <Reference Include="Hangfire.MAMQSqlExtension, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Hangfire.MAMQSqlExtension.1.0.2\lib\netstandard2.0\Hangfire.MAMQSqlExtension.dll</HintPath>
+      <HintPath>..\..\packages\Hangfire.MAMQSqlExtension.1.0.3\lib\netstandard2.0\Hangfire.MAMQSqlExtension.dll</HintPath>
     </Reference>
     <Reference Include="Hangfire.SqlServer, Version=1.7.11.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Hangfire.SqlServer.1.7.11\lib\net45\Hangfire.SqlServer.dll</HintPath>

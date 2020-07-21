@@ -13,17 +13,24 @@
     <Company />
     <PackageProjectUrl>https://github.com/GeXiaoguo/Hangfire.MAMQSqlExtension</PackageProjectUrl>
     <RepositoryUrl>https://github.com/GeXiaoguo/Hangfire.MAMQSqlExtension</RepositoryUrl>
-    <PackageVersion>1.0.2</PackageVersion>
+    <PackageVersion>1.0.3</PackageVersion>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>    
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="HangFire.SqlServer" Version="1.7.11" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
     <PackageReference Include="nuget.commandline" Version="5.6.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HangFire.SqlServer" Version="1.7.11" />
   </ItemGroup>
 
 </Project>
