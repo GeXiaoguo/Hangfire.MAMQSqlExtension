@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="HangFire.Core" Version="1.7.11" />
-    <PackageReference Include="Hangfire.MAMQSqlExtension" Version="1.0.3" />
+    <PackageReference Include="Hangfire.MAMQSqlExtension" Version="1.0.5" />
     <PackageReference Include="HangFire.SqlServer" Version="1.7.11" />
   </ItemGroup>
 

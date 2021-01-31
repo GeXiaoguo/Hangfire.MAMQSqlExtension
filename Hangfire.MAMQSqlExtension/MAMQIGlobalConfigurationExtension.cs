@@ -1,7 +1,4 @@
-﻿
-
-
-namespace Hangfire.MAMQSqlExtension
+﻿namespace Hangfire.MAMQSqlExtension
 {
     using Hangfire;
     using Hangfire.SqlServer;

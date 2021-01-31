@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hangfire.MAMQSqlExtension",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3001EB7D-9563-4935-B957-0FE81AFAC8E5}"
 	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README-Dev.md = README-Dev.md
 		README.md = README.md
 	EndProjectSection
 EndProject

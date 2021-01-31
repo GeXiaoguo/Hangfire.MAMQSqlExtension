@@ -5,7 +5,7 @@
     <LangVersion>8.0</LangVersion>
     <nullable>enable</nullable>
   </PropertyGroup>
-    
+
   <PropertyGroup>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>Enables running multiple Hangfire servers as different applications against a single SQL Server database</Description>
@@ -13,11 +13,15 @@
     <Company />
     <PackageProjectUrl>https://github.com/GeXiaoguo/Hangfire.MAMQSqlExtension</PackageProjectUrl>
     <RepositoryUrl>https://github.com/GeXiaoguo/Hangfire.MAMQSqlExtension</RepositoryUrl>
-    <PackageVersion>1.0.3</PackageVersion>
+    <PackageVersion>1.0.5</PackageVersion>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>    
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
   </PropertyGroup>
+
+ <PropertyGroup>
+  <PackageLicenseExpression>MIT</PackageLicenseExpression>
+</PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All">
