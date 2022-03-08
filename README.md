@@ -10,10 +10,11 @@ For example:
 
 Unfortunately, this does not work. Hangfire job queue was initially designed only for job execution, not job scheduling. In the setup above, schedulers in `AppServer1` sees jobs in `AppQueue2` and will not respect the queue setting. It tries to deserialize the jobs for scheduling. The deserialization will cause a dll not found exception. What's more, when the job fails and is being retried, retries will also not respect the queue setting. Jobs set for `AppQueue2` will be retired by `AppServer1` and will cause retry failure again.
 
-This extension attempts to provide a workaround before the multiple application, multiple servers, single database setup is officially supported.
+## Solution
+This extension is a workaround before Hangfire supports the multiple application, multiple servers, single database setup officially.
 
 
-### Usage
+## Usage
 Usage examples are provided in the [examples](https://github.com/GeXiaoguo/Hangfire.MAMQSqlExtension/tree/master/examples). The necessary steps are listed below.
 
 1. Install NuGet package [Hangfire.MAMQSqlExtension](https://www.nuget.org/packages/Hangfire.MAMQSqlExtension/1.0.5):  i.e. `Install-Package Hangfire.MAMQSqlExtension -Version 1.0.5`
