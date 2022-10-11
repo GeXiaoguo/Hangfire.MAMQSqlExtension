@@ -27,7 +27,7 @@
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="nuget.commandline" Version="5.7.2">
+    <PackageReference Include="nuget.commandline" Version="5.9.3">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
