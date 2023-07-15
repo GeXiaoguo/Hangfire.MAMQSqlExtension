@@ -96,7 +96,7 @@ namespace Hangfire.MAMQSqlExtension
 
         public override List<string> GetFirstByLowestScoreFromSet(string key, double fromScore, double toScore, int count)
         {
-            if (!_queues.Any())
+            if (!_queues.Any() || string.IsNullOrEmpty(key))
                 return new List<string>();
 
             var ids = _sqlServerConnection.GetFirstByLowestScoreFromSet(key, fromScore, toScore, count);
@@ -115,7 +115,7 @@ namespace Hangfire.MAMQSqlExtension
 
                 string queue = recurringJobId switch
                 {
-                    null => "default",
+                    null => _sqlServerConnection.GetJobParameter(id, "Queue")?.Replace("\"", "") ?? "default",
                     _ => _sqlServerConnection.GetValueFromHash($"recurring-job:{recurringJobId}", "Queue") ?? "default"
                 };
 
